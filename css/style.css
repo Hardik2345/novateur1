@@ -213,3 +213,46 @@ Version: 1.3.1
 			overflow: inherit;
 		}
 	}
+/* Add this CSS code to your existing style.css file */
+
+.circular-progress {
+  margin-top: 50px; /* Adjust as needed */
+  text-align: center;
+}
+
+.progress-bar-wrapper {
+  position: relative;
+  width: 120px; /* Adjust width as needed */
+  height: 120px; /* Adjust height as needed */
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ccc; /* Background color of the progress bar */
+  animation: progress-animation 2s ease forwards;
+}
+
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Adjust font size as needed */
+  color: #333; /* Color of the progress label */
+}
+
+@keyframes progress-animation {
+  from {
+    transform: rotate(0deg);
+    background-color: #007bff; /* Start color of the progress bar */
+  }
+  to {
+    transform: rotate(360deg);
+    background-color: #00cc00; /* End color of the progress bar */
+  }
+}
